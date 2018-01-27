@@ -10,6 +10,7 @@ public static class BulletPool
     {
         bullet.gameObject.SetActive(false);
         bullet.transform.parent = null;
+        bullet.transform.position = Vector3.zero;
     }
 }
 public static class Extensions {
