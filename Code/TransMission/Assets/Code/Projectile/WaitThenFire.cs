@@ -1,16 +1,23 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class WaitThenFire : MonoBehaviour, ITrigger {
     public float WaitTime = 1f;
     public bool repeat = true;
-    public ITrigger TriggerEvent;
+    public Behaviour TriggerEvent;
+    ITrigger triggerEvent;
     float timeLeft = 0f;
 
 	// Use this for initialization
 	void Start () {
         timeLeft = WaitTime;
+        if (TriggerEvent)
+        {
+            triggerEvent = TriggerEvent as ITrigger;
+            if (triggerEvent == null) Debug.LogException(new Exception("A trigger wasn't correctly assigned to the object: " + gameObject.name));
+        }
 	}
 	
 	// Update is called once per frame
@@ -20,8 +27,8 @@ public class WaitThenFire : MonoBehaviour, ITrigger {
         {
             if(repeat)
                 timeLeft = WaitTime;
-            if (TriggerEvent != null)
-                TriggerEvent.Trigger();
+            if (triggerEvent != null)
+                triggerEvent.Trigger();
         }
 	}
 

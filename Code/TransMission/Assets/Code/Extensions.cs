@@ -8,6 +8,8 @@ public static class BulletPool
     static Bullet[] Pool = new Bullet[MAXBULLETS];
     public static void Destroy(this Bullet bullet)
     {
+        Object.Destroy(bullet.gameObject);
+        return;
         bullet.gameObject.SetActive(false);
         bullet.transform.parent = null;
         bullet.transform.position = Vector3.zero;

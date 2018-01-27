@@ -28,7 +28,6 @@ public class Drone : MonoBehaviour {
                 if (bullet != null)
                 {
                     bullet.Destroy();
-                    Debug.Log("bullet hit the drone");
                 }
             }
         }
