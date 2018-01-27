@@ -6,7 +6,10 @@ using UnityEngine;
 public class WaitThenFire : MonoBehaviour, ITrigger {
     public float WaitTime = 1f;
     public bool repeat = true;
+    public uint MaxRepeats = 0;
     public Behaviour TriggerEvent;
+
+    uint numRepeats = 0;
     ITrigger triggerEvent;
     float timeLeft = 0f;
 
@@ -25,8 +28,16 @@ public class WaitThenFire : MonoBehaviour, ITrigger {
         timeLeft -= Time.deltaTime;
         if (timeLeft < 0)
         {
-            if(repeat)
+            if (repeat)
+            {
                 timeLeft = WaitTime;
+                numRepeats++;
+                if (numRepeats >= MaxRepeats && MaxRepeats>0)
+                {
+                    enabled = false;
+                    numRepeats = 0;
+                }
+            }
             if (triggerEvent != null)
                 triggerEvent.Trigger();
         }
@@ -35,5 +46,6 @@ public class WaitThenFire : MonoBehaviour, ITrigger {
     public void Trigger()
     {
         timeLeft = WaitTime;
+        enabled = true;
     }
 }

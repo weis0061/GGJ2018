@@ -4,7 +4,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(Collider2D))]
 public class Drone : MonoBehaviour {
-    public static float speed = 10f;
+    public float speed = 4f;
     Collider2D myCollider;
     // Use this for initialization
     void Start () {

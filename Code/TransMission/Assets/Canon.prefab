@@ -19,7 +19,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4798911728838492}
-  - component: {fileID: 114754398161819678}
   m_Layer: 11
   m_Name: CannonMountPoint
   m_TagString: Untagged
@@ -51,7 +50,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4497927284571052}
-  - component: {fileID: 114536736063904234}
+  - component: {fileID: 114454378904912788}
+  - component: {fileID: 114714768712583036}
   m_Layer: 11
   m_Name: Canon
   m_TagString: Untagged
@@ -79,14 +79,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1351741845702438}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.78, y: 2.34, z: -5.56}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
+  m_LocalPosition: {x: 14.12, y: 4, z: -5.4844}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4173949527850766}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!4 &4798911728838492
 Transform:
   m_ObjectHideFlags: 1
@@ -100,7 +100,7 @@ Transform:
   m_Father: {fileID: 4173949527850766}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114536736063904234
+--- !u!114 &114454378904912788
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -108,22 +108,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 1351741845702438}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40de5eeaa154ede4dacf8bcd846c8ff0, type: 3}
+  m_Script: {fileID: 11500000, guid: 2734fe2845873a54e93b7849e7df8f2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RotationSpeed: 360
---- !u!114 &114754398161819678
+  WaitTime: 0.3
+  repeat: 1
+  MaxRepeats: 0
+  TriggerEvent: {fileID: 114714768712583036}
+--- !u!114 &114714768712583036
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1111761623546688}
+  m_GameObject: {fileID: 1351741845702438}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 93d482e8335d20b44af924629e6d7bbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BulletType: {fileID: 0}
+  BulletPrefab: {fileID: 1939322827516178, guid: e7145fb123f6d1c44aa7a27dc556bbde,
+    type: 2}
+  BulletSpeed: 5
+  BulletCreationPoint: {fileID: 4798911728838492}
 --- !u!212 &212377003309151074
 SpriteRenderer:
   m_ObjectHideFlags: 1

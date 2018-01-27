@@ -51,10 +51,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Code\Cannon.cs" />
      <Compile Include="Assets\Code\Displace.cs" />
      <Compile Include="Assets\Code\Drone.cs" />
      <Compile Include="Assets\Code\Extensions.cs" />
+     <Compile Include="Assets\Code\FireBullet.cs" />
      <Compile Include="Assets\Code\IFire.cs" />
      <Compile Include="Assets\Code\Projectile\Bullet.cs" />
      <Compile Include="Assets\Code\Projectile\WaitThenFire.cs" />

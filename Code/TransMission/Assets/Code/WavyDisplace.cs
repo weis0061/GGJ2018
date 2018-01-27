@@ -5,6 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(Displace))]
 public class WavyDisplace : MonoBehaviour {
     public float WaveSize = 0f;
+    public float WaveFrequency = 10f;
     Displace displaceComponent;
     float CurrentSlope = 0f;
     float TimeSinceBirth = 0f;
@@ -16,7 +17,7 @@ public class WavyDisplace : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         TimeSinceBirth += Time.deltaTime;
-        CurrentSlope = Mathf.Sin(TimeSinceBirth*10) * WaveSize;
+        CurrentSlope = Mathf.Sin(TimeSinceBirth*WaveFrequency) * WaveSize;
         var direction = displaceComponent.Speed.normalized;
         var dispVec = Vector3.Cross(direction, Vector3.forward) * CurrentSlope;
         transform.position += dispVec;
