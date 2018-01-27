@@ -59,6 +59,7 @@
      <Compile Include="Assets\Code\Projectile\Bullet.cs" />
      <Compile Include="Assets\Code\Projectile\WaitThenFire.cs" />
      <Compile Include="Assets\Code\Rotate.cs" />
+     <Compile Include="Assets\Code\SpriteAnimation.cs" />
      <Compile Include="Assets\Code\WavyDisplace.cs" />
      <None Include="Assets\Code\ColorShift.shader" />
  <Reference Include="UnityEngine.UI">
