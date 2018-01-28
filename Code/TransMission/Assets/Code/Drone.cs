@@ -18,7 +18,13 @@ public class Drone : MonoBehaviour {
 	void Update () {
         if (!DeadDrone.activeInHierarchy && GameState.isGameActive)
         {
+            var camerapos = Camera.main.transform.position.xy();
+            var dist = Camera.main.orthographicSize;
             transform.position += new Vector3(-Input.GetAxis("left"), Input.GetAxis("up"), 0).normalized * speed * Time.deltaTime;
+            var x = Mathf.Clamp(transform.position.x, camerapos.x - dist, camerapos.x + dist);
+            var y = Mathf.Clamp(transform.position.y, camerapos.y - dist, camerapos.y + dist);
+            transform.position = new Vector3(x, y, transform.position.z);
+
             //Debug.Log("DT: " + Time.deltaTime + ", Inputs:" + Input.GetAxis("left") + ", " + Input.GetAxis("up"));
 
             var hits = new Collider2D[10];
