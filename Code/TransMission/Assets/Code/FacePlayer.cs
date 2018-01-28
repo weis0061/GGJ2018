@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FacePlayer : MonoBehaviour
 {
-    float speed = 0f;
+    public float speed = 3f;
     GameObject player;
     void Start()
     {
@@ -15,7 +15,13 @@ public class FacePlayer : MonoBehaviour
     {
         if (GameState.isGameActive)
         {
-            transform.eulerAngles.Set(0, 0, Vector2.Angle(transform.position,player.transform.position));
+            transform.eulerAngles=new Vector3(0, 0,Mathf.LerpAngle(transform.eulerAngles.z,AngleBetweenVector2(player.transform.position.xy(), transform.position.xy()),Time.deltaTime*speed));
         }
+    }
+    private float AngleBetweenVector2(Vector2 vec1, Vector2 vec2)
+    {
+        Vector2 diference = vec2 - vec1;
+        float sign = (vec2.y < vec1.y) ? -1.0f : 1.0f;
+        return Vector2.Angle(Vector2.right, diference) * sign;
     }
 }
