@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: 70944bfcebea51b4f841c15d721f63d0
-timeCreated: 1517101889
+guid: bd290f6e9f139d747a959db1f213defc
+timeCreated: 1517103391
 licenseType: Pro
 TextureImporter:
   fileIDToRecycleName:
-    21300000: AA gun sprite_0
-    21300002: AA gun sprite_1
+    21300000: Drone sprite_0
+    21300002: Drone sprite_1
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -77,7 +77,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: AA gun sprite_0
+      name: Drone sprite_0
       rect:
         serializedVersion: 2
         x: 0
@@ -91,7 +91,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: AA gun sprite_1
+      name: Drone sprite_1
       rect:
         serializedVersion: 2
         x: 32
