@@ -58,8 +58,8 @@ public class GameState : MonoBehaviour
         }
     }
 
-    float DeathTimer = 3f;
-    float DeathTimeLeft = 3f;
+    float DeathTimer = 1f;
+    float DeathTimeLeft = 1f;
     bool isDroneDead = false;
 
     public void DroneDeath()
