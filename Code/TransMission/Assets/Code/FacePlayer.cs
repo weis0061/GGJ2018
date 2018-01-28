@@ -5,6 +5,7 @@ using UnityEngine;
 public class FacePlayer : MonoBehaviour
 {
     public float speed = 3f;
+    public float MaxSpeed = 60f;
     GameObject player;
     void Start()
     {
@@ -15,7 +16,7 @@ public class FacePlayer : MonoBehaviour
     {
         if (GameState.isGameActive)
         {
-            transform.eulerAngles=new Vector3(0, 0,Mathf.LerpAngle(transform.eulerAngles.z,AngleBetweenVector2(player.transform.position.xy(), transform.position.xy()),Time.deltaTime*speed));
+            transform.eulerAngles=new Vector3(0, 0, Mathf.LerpAngle(transform.eulerAngles.z, Mathf.Min(AngleBetweenVector2(player.transform.position.xy(), transform.position.xy()),MaxSpeed*Time.deltaTime),Time.deltaTime*speed));
         }
     }
     private float AngleBetweenVector2(Vector2 vec1, Vector2 vec2)
