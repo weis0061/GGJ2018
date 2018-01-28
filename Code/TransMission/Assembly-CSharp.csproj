@@ -70,6 +70,7 @@
      <Compile Include="Assets\Code\Rotate.cs" />
      <Compile Include="Assets\Code\SpriteAnimation.cs" />
      <Compile Include="Assets\Code\WavyDisplace.cs" />
+     <Compile Include="Assets\Code\WinTrigger.cs" />
      <None Include="Assets\Code\ColorShift.shader" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>

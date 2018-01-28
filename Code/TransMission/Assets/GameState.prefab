@@ -92,6 +92,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+--- !u!1 &1425176631088508
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4338781050390644}
+  - component: {fileID: 131487105936287958}
+  - component: {fileID: 114530443304179980}
+  m_Layer: 0
+  m_Name: WinFade
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1442538373372164
 GameObject:
   m_ObjectHideFlags: 1
@@ -247,6 +264,19 @@ Transform:
   m_Father: {fileID: 224776774081135618}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4338781050390644
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1425176631088508}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 224776774081135618}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4469167196098520
 Transform:
   m_ObjectHideFlags: 1
@@ -387,6 +417,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 349631ad364de9149bd5fa254fdf9cd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114530443304179980
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1425176631088508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2f6f44e06eb81943b7e7817c364a733, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guiTexture: {fileID: 131487105936287958}
 --- !u!114 &114955084484402650
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -498,6 +540,25 @@ GUITexture:
   m_RightBorder: 0
   m_TopBorder: 0
   m_BottomBorder: 0
+--- !u!131 &131487105936287958
+GUITexture:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1425176631088508}
+  m_Enabled: 1
+  m_Texture: {fileID: 10305, guid: 0000000000000000f000000000000000, type: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_PixelInset:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  m_LeftBorder: 0
+  m_RightBorder: 0
+  m_TopBorder: 0
+  m_BottomBorder: 0
 --- !u!131 &131520493083818638
 GUITexture:
   m_ObjectHideFlags: 1
@@ -587,6 +648,7 @@ RectTransform:
   m_Children:
   - {fileID: 4258112648218512}
   - {fileID: 4732262488823376}
+  - {fileID: 4338781050390644}
   m_Father: {fileID: 4091510141540190}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
