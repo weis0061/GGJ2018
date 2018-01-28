@@ -8,6 +8,7 @@ public class SpriteAnimation : MonoBehaviour, ITrigger
 {
     public bool repeat = false;
     public float animSpeed = 1f;
+    public uint startFrame = 0;
     public Sprite[] sprites;
 
     float timeToNextFrame = 0f;
@@ -18,25 +19,27 @@ public class SpriteAnimation : MonoBehaviour, ITrigger
     {
         rend = GetComponent<SpriteRenderer>();
         timeToNextFrame = 1 / animSpeed;
+        currentFrame = startFrame;
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
+        if (!enabled) return;
         timeToNextFrame -= Time.deltaTime;
         if (timeToNextFrame <= 0)
         {
             currentFrame++;
+            if (currentFrame >= sprites.Length)
+                currentFrame = 0;
+            if (!repeat && currentFrame == startFrame)
+            {
+                rend.enabled = false;
+                enabled = false;
+            }
             timeToNextFrame = 1 / animSpeed;
         }
-        if (currentFrame >= sprites.Length)
 
-            currentFrame = 0;
-        if (!repeat)
-        {
-            rend.enabled = false;
-            enabled = false;
-        }
         rend.sprite = sprites[currentFrame];
     }
 
