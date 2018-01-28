@@ -17,7 +17,7 @@ public class WavyDisplace : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        if (!GameState.isGameActive) return;
+        if (!GameState.isGameActive)  return;
         TimeSinceBirth += Time.deltaTime;
         CurrentSlope = Mathf.Sin(TimeSinceBirth*WaveFrequency) * WaveSize;
         var direction = displaceComponent.Speed.normalized;
