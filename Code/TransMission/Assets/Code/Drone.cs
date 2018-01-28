@@ -8,6 +8,7 @@ public class Drone : MonoBehaviour {
     public float speed = 4f;
     Collider2D myCollider;
     public GameObject DeadDrone;
+    public GameObject DroneRender;
     // Use this for initialization
     void Start () {
         myCollider = GetComponent<Collider2D>();
@@ -43,5 +44,6 @@ public class Drone : MonoBehaviour {
     {
         GameState.Singleton.DroneDeath();
         DeadDrone.SetActive(true);
+        DroneRender.SetActive(false);
     }
 }

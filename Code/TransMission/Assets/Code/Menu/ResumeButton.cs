@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class ResumeButton : MonoBehaviour {
 
-    void OnMouseDownAsButton()
+    void OnMouseUpAsButton()
     {
-        GameState.Singleton.Unpause();
         Debug.Log("unpause");
+        GameState.Singleton.Unpause();
     }
     void Update()
     {
         Debug.Log("resume update");
-        if (Input.GetKeyDown(KeyCode.Escape)) OnMouseDownAsButton();
+        if (Input.GetKeyDown(KeyCode.Escape)) OnMouseUpAsButton();
     }
 }

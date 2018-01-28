@@ -58,8 +58,8 @@ public class GameState : MonoBehaviour
         }
     }
 
-    float DeathTimer = 5f;
-    float DeathTimeLeft = 5f;
+    float DeathTimer = 3f;
+    float DeathTimeLeft = 3f;
     bool isDroneDead = false;
 
     public void DroneDeath()
@@ -76,6 +76,7 @@ public class GameState : MonoBehaviour
     public void Unpause()
     {
         PauseMenu.SetActive(false);
+        RespawnMenu.SetActive(false);
         isGameActive = true;
         AudioListener.volume = 1f;
     }
@@ -83,6 +84,7 @@ public class GameState : MonoBehaviour
     public void Respawn()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        Unpause();
     }
 
     public void Quit()
