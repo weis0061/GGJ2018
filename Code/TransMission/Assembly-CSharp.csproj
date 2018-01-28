@@ -51,6 +51,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Code\ActivateObjectTrigger.cs" />
      <Compile Include="Assets\Code\Displace.cs" />
      <Compile Include="Assets\Code\Drone.cs" />
      <Compile Include="Assets\Code\Extensions.cs" />
