@@ -7,6 +7,7 @@ using UnityEngine;
 public class SpriteAnimation : MonoBehaviour, ITrigger
 {
     public bool repeat = false;
+    public bool DisableRendererOnEnd = true;
     public float animSpeed = 1f;
     public uint startFrame = 0;
     public Sprite[] sprites;
@@ -35,6 +36,7 @@ public class SpriteAnimation : MonoBehaviour, ITrigger
                 currentFrame = 0;
             if (!repeat && currentFrame == startFrame)
             {
+                if(DisableRendererOnEnd)
                 rend.enabled = false;
                 enabled = false;
             }
