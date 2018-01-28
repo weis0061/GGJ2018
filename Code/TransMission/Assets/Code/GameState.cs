@@ -46,8 +46,6 @@ public class GameState : MonoBehaviour
             DeathTimeLeft -= Time.deltaTime;
             if (DeathTimeLeft < 0)
             {
-                isDroneDead = false;
-                DeathTimeLeft = DeathTimer;
                 RespawnMenu.SetActive(true);
                 isGameActive = false;
             }
@@ -84,6 +82,8 @@ public class GameState : MonoBehaviour
     public void Respawn()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        DeathTimeLeft = DeathTimer;
+        isDroneDead = false;
         Unpause();
     }
 

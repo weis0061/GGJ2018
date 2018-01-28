@@ -265,6 +265,11 @@ MonoBehaviour:
   repeat: 1
   MaxRepeats: 7
   TriggerEvent: {fileID: 470022540}
+--- !u!1 &638694118 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1841160302946826, guid: efc1c56a920c2fd44ab88fa994f85f06,
+    type: 2}
+  m_PrefabInternal: {fileID: 787888249}
 --- !u!1001 &703277518
 Prefab:
   m_ObjectHideFlags: 0
@@ -388,6 +393,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114762849312979174, guid: efc1c56a920c2fd44ab88fa994f85f06,
+        type: 2}
+      propertyPath: DroneRender
+      value: 
+      objectReference: {fileID: 638694118}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: efc1c56a920c2fd44ab88fa994f85f06, type: 2}
   m_IsPrefabParent: 0
