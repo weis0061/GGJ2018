@@ -55,6 +55,7 @@
      <Compile Include="Assets\Code\Drone.cs" />
      <Compile Include="Assets\Code\Extensions.cs" />
      <Compile Include="Assets\Code\FireBullet.cs" />
+     <Compile Include="Assets\Code\FireEventOnInCamera.cs" />
      <Compile Include="Assets\Code\GameState.cs" />
      <Compile Include="Assets\Code\IFire.cs" />
      <Compile Include="Assets\Code\Menu\QuitButton.cs" />
