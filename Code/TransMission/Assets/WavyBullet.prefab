@@ -81,7 +81,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04b6d142c5264854488228b61891af1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WaveSize: 0.02
+  WaveSize: 0.1
   WaveFrequency: 10
 --- !u!114 &114957578794331564
 MonoBehaviour:
@@ -128,7 +128,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: ef654b2023ca22d4aa6d3c72de36932d, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6764706, g: 0.308391, b: 0.308391, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
