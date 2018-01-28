@@ -16,7 +16,10 @@ public class FacePlayer : MonoBehaviour
     {
         if (GameState.isGameActive)
         {
-            transform.eulerAngles=new Vector3(0, 0, Mathf.LerpAngle(transform.eulerAngles.z, Mathf.Min(AngleBetweenVector2(player.transform.position.xy(), transform.position.xy()),MaxSpeed*Time.deltaTime),Time.deltaTime*speed));
+            var AngleTo = AngleBetweenVector2(player.transform.position.xy(), transform.position.xy());
+            Debug.Log(AngleTo);
+            var AngleToClamped = Mathf.Clamp(AngleTo, transform.eulerAngles.z - MaxSpeed * Time.deltaTime, transform.eulerAngles.z + MaxSpeed * Time.deltaTime);
+            transform.eulerAngles=new Vector3(0,0, AngleToClamped);
         }
     }
     private float AngleBetweenVector2(Vector2 vec1, Vector2 vec2)
