@@ -15,7 +15,7 @@ public class Drone : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (!DeadDrone.activeInHierarchy)
+        if (!DeadDrone.activeInHierarchy && GameState.isGameActive)
         {
             transform.position += new Vector3(-Input.GetAxis("left"), Input.GetAxis("up"), 0).normalized * speed * Time.deltaTime;
             //Debug.Log("DT: " + Time.deltaTime + ", Inputs:" + Input.GetAxis("left") + ", " + Input.GetAxis("up"));

@@ -57,6 +57,9 @@
      <Compile Include="Assets\Code\FireBullet.cs" />
      <Compile Include="Assets\Code\GameState.cs" />
      <Compile Include="Assets\Code\IFire.cs" />
+     <Compile Include="Assets\Code\Menu\QuitButton.cs" />
+     <Compile Include="Assets\Code\Menu\RestartButton.cs" />
+     <Compile Include="Assets\Code\Menu\ResumeButton.cs" />
      <Compile Include="Assets\Code\Projectile\Bullet.cs" />
      <Compile Include="Assets\Code\Projectile\WaitThenFire.cs" />
      <Compile Include="Assets\Code\Rotate.cs" />

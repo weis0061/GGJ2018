@@ -25,6 +25,7 @@ public class WaitThenFire : MonoBehaviour, ITrigger {
 	
 	// Update is called once per frame
 	void Update () {
+        if (!GameState.isGameActive) return;
         timeLeft -= Time.deltaTime;
         if (timeLeft < 0)
         {

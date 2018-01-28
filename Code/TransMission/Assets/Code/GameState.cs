@@ -8,7 +8,7 @@ public class GameState : MonoBehaviour
 {
     public GameObject RespawnMenu;
     public GameObject PauseMenu;
-    public static bool isGameActive;
+    public static bool isGameActive=true;
     static bool gameStateAlreadyExists = false;
 
     static GameState _singleton;
@@ -34,11 +34,14 @@ public class GameState : MonoBehaviour
         _singleton = this;
         DontDestroyOnLoad(gameObject);
         RespawnMenu.SetActive(false);
+        PauseMenu.SetActive(false);
+        isGameActive = true;
     }
 
     // Update is called once per frame
     void Update()
     {
+        Debug.Log("gammgasdfmngas");
         if (isDroneDead)
         {
             DeathTimeLeft -= Time.deltaTime;
@@ -49,6 +52,10 @@ public class GameState : MonoBehaviour
                 RespawnMenu.SetActive(true);
                 isGameActive = false;
             }
+        }
+        else if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Pause();
         }
     }
 
@@ -65,11 +72,13 @@ public class GameState : MonoBehaviour
     {
         PauseMenu.SetActive(true);
         isGameActive = false;
+        AudioListener.volume = 0.5f;
     }
     public void Unpause()
     {
         PauseMenu.SetActive(false);
         isGameActive = true;
+        AudioListener.volume = 1f;
     }
 
     public void Respawn()

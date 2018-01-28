@@ -25,6 +25,7 @@ public class SpriteAnimation : MonoBehaviour, ITrigger
     // Update is called once per frame
     void Update()
     {
+        if (!GameState.isGameActive) return;
         if (!enabled) return;
         timeToNextFrame -= Time.deltaTime;
         if (timeToNextFrame <= 0)
